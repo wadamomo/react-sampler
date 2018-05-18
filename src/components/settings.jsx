@@ -4,9 +4,8 @@ import { render } from 'react-dom';
 class Settings extends React.Component {
   render() {
     return (
-      <div>
-        <button id="gear">Gear</button>
-        <div className="modal">Settings in here</div>
+      <div id="settings">
+        <div id="info"><i className="fas fa-info-circle"></i></div>
       </div>
     )
   }
