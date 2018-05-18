@@ -37,6 +37,10 @@ body {
   text-transform: uppercase;
 }
 
+.character {
+  font-family: 'Comfortaa', sans-serif;
+}
+
 #board .button:hover {
   background: rgb(255, 185, 55);
 }
