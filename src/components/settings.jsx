@@ -6,7 +6,7 @@ class Settings extends React.Component {
     return (
       <div>
         <button id="gear">Gear</button>
-        <div class="modal">Settings in here</div>
+        <div className="modal">Settings in here</div>
       </div>
     )
   }
