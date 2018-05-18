@@ -23,6 +23,13 @@ class App extends React.Component {
     let key = document.querySelector(`div[data-key="${code}"]`); //change key codes back to click event!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     let audio = document.querySelector(`audio[data-key="${code}"]`);
     if (!audio) return;
+    if (e.keyCode) {
+      console.log(e.keyCode);
+      key.style.background = "rgba(255, 165, 0, 1)";
+      setTimeout(() => {
+        key.style.background = "yellow";
+      }, 200);
+    }
     key.classList.add("playing");
     audio.currentTime = 0;
     audio.play();

@@ -22,8 +22,11 @@ body {
   border-radius: 10px;
 }
 
-#board .button {
+#board .button, #board button {
   background: yellow;
+  color: black;
+  display: inline-block;
+  padding-left: 2px;
   height: 75px;
   width: 75px;
   margin: 0.5em;
@@ -34,11 +37,11 @@ body {
   text-transform: uppercase;
 }
 
-#board button:hover {
+#board .button:hover {
   background: rgb(255, 185, 55);
 }
 
-#board button:active{
+#board .button:active{
   background: rgba(255, 165, 0, 1);
 }
 
