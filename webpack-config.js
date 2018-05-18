@@ -2,7 +2,7 @@ var path = require('path');
 var webpack = require('webpack');
 
 const entry = [
- './client/index.js'
+ './src/index.js'
 ];
 
 const output = {
