@@ -8,7 +8,7 @@ class VizLib extends React.Component {
   render() {
     return (
       <div id='vizlib'>
-        <Library audioFiles={this.props.audioFiles}/>
+        <Library audioFiles={this.props.audioFiles} addSample={this.props.addSample} mapSample={this.props.mapSample}/>
         <Visualizer />
       </div>
     )
