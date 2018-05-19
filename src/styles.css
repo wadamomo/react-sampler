@@ -3,6 +3,7 @@
 body {
   background: #333;
   color: white;
+  color: linear-gradient(to top, rgb(149, 104, 255), rgb(132, 0, 255));
   font-family: 'Comfortaa', sans-serif;
 }
 
@@ -23,7 +24,7 @@ body {
 }
 
 #board .button, #board button {
-  background: yellow;
+  background: linear-gradient(to top, rgb(255, 253, 131), rgb(255, 230, 0));
   color: black;
   display: inline-block;
   padding-left: 2px;
@@ -35,6 +36,7 @@ body {
   font-family: 'Comfortaa', sans-serif;
   font-size: 18px;
   text-transform: uppercase;
+  box-shadow: 2px 2px #ffd000;
 }
 
 .character {
@@ -57,6 +59,10 @@ body {
   margin-top: 2em;
 }
 
+#map-mode {
+  
+}
+
 /*------- Library and Visualizer ------*/
 
 #vizlib {
@@ -64,9 +70,37 @@ body {
   width: 300px;
 }
 
-#visualizer, #library {
+#visualizer {
   display: none;
 }
+
+#samples {
+  overflow: scroll;
+  height: 200px;
+  width: 300px;
+  margin: 1em auto;
+}
+
+#library li {
+  list-style-type: none;
+}
+
+.grey {
+  background: rgba(211, 211, 211, 0.8);
+  color: black;
+  padding: 5px;
+}
+
+.blue {
+  background: rgba(236, 236, 236, 0.8);
+  color: black;
+  padding: 5px;
+}
+
+.grey:hover, .blue:hover {
+  color:  rgb(132, 0, 255);
+}
+
 
 /*------- Settings ------*/
 
