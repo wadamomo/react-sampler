@@ -8,6 +8,9 @@ class Board extends React.Component {
   render() {
     return (
       <div id="board">
+        <div id="map-mode">
+          Map Mode
+        </div>
         <div className="button-row">
           <Button id="0" keyCodes={this.props.keyCodes} keySymbols={this.props.keySymbols} clickHandler={this.props.clickHandler} removeTransition={this.props.removeTransition} audioFiles={this.props.audioFiles}/>
           <Button id="1" keyCodes={this.props.keyCodes} keySymbols={this.props.keySymbols} clickHandler={this.props.clickHandler} removeTransition={this.props.removeTransition} audioFiles={this.props.audioFiles}/>

@@ -13,68 +13,69 @@ class App extends React.Component {
       keySymbols: [1, 2, 3, 4, 'q', 'w', 'e', 'r', 'a', 's', 'd', 'f', 'z', 'x', 'c', 'v'],
       audioFiles: [
         {
-          name: "High Tom",
-          source: "samples/0.WAV"
+          name: "clap",
+          source: "samples/ clap.WAV"
         },
         {
-          name: "Cowbell",
-          source: "samples/1.WAV"
+          name: "closed-hat",
+          source: "samples/ closed-hat.WAV"
         },
         {
-          name: "Closed Hat",
-          source: "samples/2.WAV"
+          name: "cowbell",
+          source: "samples/ cowbell.WAV"
         },
         {
-          name: "Ding",
-          source: "samples/3.WAV"
+          name: "cymbal",
+          source: "samples/ cymbal.WAV"
         },
         {
-          name: "Clap",
-          source: "samples/4.WAV"
+          name: "high tom",
+          source: "samples/ high tom.WAV"
         },
         {
-          name: "Cymbal",
-          source: "samples/5.WAV"
+          name: "kick drum",
+          source: "samples/ kick drum.WAV"
         },
         {
-          name: "6",
-          source: "samples/6.WAV"
+          name: "mid tom",
+          source: "samples/ mid tom.WAV"
         },
         {
-          name: "7",
-          source: "samples/7.WAV"
+          name: "open-hat",
+          source: "samples/ open-hat.WAV"
         },
         {
-          name: "8",
-          source: "samples/8.WAV"
+          name: "snare",
+          source: "samples/ snare.WAV"
         },
         {
-          name: "9",
-          source: "samples/9.WAV"
+          name: "808 loop",
+          source: "samples/808 loop.WAV"
         },
         {
-          name: "10",
-          source:"samples/10.WAV"
+          name: "bass stab",
+          source: "samples/bass stab.WAV"
         },
         {
-          name: "11",
-          source:"samples/11.WAV"
+          name: "blip",
+          source:"samples/blip.WAV"
         },
         {
-          name: "12",
-          source:"samples/12.WAV"
+          name: "bongo",
+          source:"samples/bongo.WAV"
         },
         {
-          name: "Ride Cymbal",
-          source: "samples/13.WAV"
+          name: "haht",
+          source:"samples/haht.WAV"
         },
         {
-          name: "14",
-          source: "samples/14.WAV"
+          name: "house loop",
+          source: "samples/house loop.WAV"
         },
         {
-          name: "Snare Drum",
-          source: "samples/15.WAV"}
+          name: "nomsayn",
+          source: "samples/nomsayn.WAV"
+        },
         ],
       mapText: '',
       mapMode: false,
@@ -123,11 +124,12 @@ class App extends React.Component {
   };
 
   addSample(e) {
-    let sampleURL = window.URL.createObjectURL(e.target.files[0]);
-    console.log(sampleURL);
     let samples = [].concat(this.state.audioFiles);
-    samples.push({name: e.target.files[0].name, source: sampleURL});
-    this.setState({audioFiles: samples});
+    for (let i = 0; i < e.target.files.length; i++) {
+      let sampleURL = window.URL.createObjectURL(e.target.files[i]);
+      samples.push({name: e.target.files[i].name.replace(/(^samples\/)|(\..+$)/g,''), source: sampleURL});
+      this.setState({audioFiles: samples});
+    }
   };
   
   removeTransition(e) {
