@@ -5,12 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="src/styles.css"/>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
   <title>Document</title>
 </head>
 <body>
- <p>!!!Sn0t OtT3rZ!!!</p> 
+
  <div id="contents"></div>
  <script type="text/javascript" src="./dist/bundle.js"></script>
+ <script>
+   document.addEventListener("DOMContentLoaded", function(event) { 
+
+     let settings = document.getElementById("settings");
+     settings.addEventListener("click", function(event) {
+       let items = document.getElementsByClassName('character');
+       for (let i = 0; i < items.length; i++) {
+         if (items[i].style.visibility === "visible") items[i].style.visibility = "hidden";
+         else items[i].style.visibility = "visible"
+         
+       }
+     })
+
+   })
+ </script>
  
 </body>
 </html>

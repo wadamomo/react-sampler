@@ -7,8 +7,8 @@ import Visualizer from './visualizer.jsx';
 class VizLib extends React.Component {
   render() {
     return (
-      <div>
-        <Library />
+      <div id='vizlib'>
+        <Library audioFiles={this.props.audioFiles}/>
         <Visualizer />
       </div>
     )

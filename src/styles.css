@@ -1,3 +1,81 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+
 body {
-  background: #fffff0;
+  background: #333;
+  color: white;
+  font-family: 'Comfortaa', sans-serif;
+}
+
+#contents {
+  display: flex;
+  max-width: 800px;
+  margin: 2em auto;
+}
+
+/*------- Board ------*/
+
+#board {
+  float: left;
+  margin-right: 2em;
+  background: rgb(112, 106, 106);
+  padding: 1em;
+  border-radius: 10px;
+}
+
+#board .button, #board button {
+  background: yellow;
+  color: black;
+  display: inline-block;
+  padding-left: 2px;
+  height: 75px;
+  width: 75px;
+  margin: 0.5em;
+  border-radius: 5px;
+  border: 1px solid  rgba(255, 165, 0, .3);
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.character {
+  font-family: 'Comfortaa', sans-serif;
+}
+
+#board .button:hover {
+  background: rgb(255, 185, 55);
+}
+
+#board .button:active{
+  background: rgba(255, 165, 0, 1);
+}
+
+.character {
+  visibility: hidden;
+}
+
+#playback {
+  margin-top: 2em;
+}
+
+/*------- Library and Visualizer ------*/
+
+#vizlib {
+  float: right;
+  width: 300px;
+}
+
+#visualizer, #library {
+  display: none;
+}
+
+/*------- Settings ------*/
+
+#settings {
+  position: fixed;
+  display: block;
+  top: -200;
+  right: 0;
+  padding-right: 1em;
+  text-align: right;
+  z-index: 10;
 }
