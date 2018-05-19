@@ -14,6 +14,9 @@ const output = {
 module.exports = {
  entry, output,
  devtool: "eval-source-map",
+ node: {
+  fs: "empty"
+},
  module: {
    rules: [
      { test: /\.css$/, use: "css-loader" },

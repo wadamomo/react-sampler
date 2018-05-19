@@ -6,9 +6,8 @@ class Button extends React.Component {
     return (
       <div data-key={this.props.keyCodes[this.props.id]} onClick={this.props.clickHandler} id={this.props.id} className="button">
          <kbd className="character">{this.props.keySymbols[this.props.id]}</kbd>
-         <audio data-key={this.props.keyCodes[this.props.id]} src={this.props.audioFiles[this.props.id]}></audio>
+         <audio data-key={this.props.keyCodes[this.props.id]} src={this.props.audioFiles[this.props.id].source}></audio>
       </div>
-      //<button><span className="character">{this.props.letter}</span></button>
     )
   }
 }
